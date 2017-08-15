@@ -44,6 +44,7 @@ namespace WebApplicationMVC.Controllers
         {
             get
             {
+                var a = 1;
                 return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
             private set
