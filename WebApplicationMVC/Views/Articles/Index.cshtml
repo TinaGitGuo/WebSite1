@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebApplicationMVC.Articles>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleTypeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagesAddr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReadTimes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentTimes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentContents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DelFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsersId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsRecommend)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleTypeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagesAddr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReadTimes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentTimes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReleaseTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentContents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DelFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsersId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRecommend)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

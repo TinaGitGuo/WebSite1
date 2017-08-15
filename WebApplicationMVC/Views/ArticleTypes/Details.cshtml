@@ -1,0 +1,42 @@
+﻿@model WebApplicationMVC.ArticleType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ArticleType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArticleTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArticleTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArticleCounts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArticleCounts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DelFlag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DelFlag)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
